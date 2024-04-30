@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 import vercel from "@astrojs/vercel/serverless";
 import i18n from "@astrolicious/i18n";
-
 import sanity from "@sanity/astro";
+import react from "@astrojs/react"; 
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +16,9 @@ export default defineConfig({
     sanity({
       projectId: "t9cmnozc",
       dataset: "production",
-      useCdn: false
-    })
+      useCdn: false,
+      studioBasePath: "/admin"
+    }),
+    react()
   ]
 });
