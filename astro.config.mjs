@@ -8,12 +8,15 @@ import sanity from "@sanity/astro";
 export default defineConfig({
   output: "hybrid",
   adapter: vercel(),
-  integrations: [i18n({
-    defaultLocale: "en",
-    locales: ["en", "fr"]
-  }), sanity({
-    projectId: "TODO:",
-    dataset: "TODO:",
-    useCdn: false
-  })]
+  integrations: [
+    i18n({
+      defaultLocale: "en",
+      locales: ["en", "fr"]
+    }),
+    sanity({
+      projectId: "t9cmnozc",
+      dataset: "production",
+      useCdn: false
+    })
+  ]
 });
